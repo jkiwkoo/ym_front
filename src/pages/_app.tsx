@@ -1,7 +1,28 @@
-import { Header } from '@/components/Header';
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import { Header } from '@/components/Header';
+import localFont from '@next/font/local';
 import Head from 'next/head';
+
+const NotoSansRegularFonts = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NotoSansRegular.ttf',
+      weight: '400',
+    },
+  ],
+  variable: '--font-notoSans',
+});
+
+const NotoSansBoldFonts = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NotoSansBold.ttf',
+      weight: '700',
+    },
+  ],
+  variable: '--font-notoSansBold',
+});
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
@@ -12,7 +33,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={``}>
+      <div
+        className={`${NotoSansRegularFonts.variable} ${NotoSansBoldFonts.variable}`}
+      >
         <Header />
         <Component {...pageProps} />
       </div>

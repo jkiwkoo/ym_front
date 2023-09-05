@@ -5,7 +5,7 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="fixed w-full z-50">
+    <div className="fixed w-full z-50 text-ym-gray-2">
       <div className="h-[54px] pc:h-[100px] flex items-center justify-center bg-ym-blue">
         <div className="hidden pc:block">
           <Image
@@ -40,7 +40,11 @@ export const Header = () => {
               router.push('/');
             }}
           >
-            <div className="h-[50px] pc:h-[89px] flex items-center">
+            <div
+              className={`h-[50px] pc:h-[89px] flex items-center ${
+                router.asPath === '/' ? 'text-black' : 'group-hover:text-black'
+              }`}
+            >
               병원 소개
             </div>
             <div
@@ -57,7 +61,13 @@ export const Header = () => {
               router.push('/prostate');
             }}
           >
-            <div className="h-[50px] pc:h-[89px] flex items-center">
+            <div
+              className={`h-[50px] pc:h-[89px] flex items-center ${
+                router.asPath === '/prostate'
+                  ? 'text-black'
+                  : 'group-hover:text-black'
+              }`}
+            >
               전립선 치료
             </div>
             <div
@@ -74,7 +84,13 @@ export const Header = () => {
               // router.push('/thyroid');
             }}
           >
-            <div className="h-[50px] pc:h-[89px] flex items-center">
+            <div
+              className={`h-[50px] pc:h-[89px] flex items-center ${
+                router.asPath === '/thyroid'
+                  ? 'text-black'
+                  : 'group-hover:text-black'
+              }`}
+            >
               갑상선 치료
             </div>
             <div
@@ -91,7 +107,13 @@ export const Header = () => {
               router.push('/directions');
             }}
           >
-            <div className="h-[50px] pc:h-[89px] flex items-center">
+            <div
+              className={`h-[50px] pc:h-[89px] flex items-center ${
+                router.asPath === '/directions'
+                  ? 'text-black'
+                  : 'group-hover:text-black'
+              }`}
+            >
               오시는 길
             </div>
             <div
