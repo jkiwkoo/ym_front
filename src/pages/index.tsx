@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <div>TEMPLATE</div>
+      <div className="h-[100vw] w-full flex justify-center">TEMPLATEd</div>
     </>
   );
 };
