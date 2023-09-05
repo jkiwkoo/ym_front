@@ -21,12 +21,16 @@ const Directions = () => {
             src={`/images/Map.png`}
             fill
             alt="Map"
+            quality={100}
+            priority
           />
           <Image
             className="hidden pc:block"
-            src={`/images/MapPC.png`}
+            src={`/images/Map.png`}
             fill
             alt="Map"
+            quality={100}
+            priority
           />
         </div>
         <div className="flex flex-col pc:flex-row justify-center items-center pc:items-start gap-[13px] pc:gap-0 mb-[40px]">
