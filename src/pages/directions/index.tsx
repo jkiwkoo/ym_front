@@ -18,7 +18,7 @@ const Directions = () => {
         <div className="relative w-[94.14vw] pc:w-[66.67vw] h-[42.8vw] pc:h-[32.4vw] mb-[30px] pc:mb-[72px]">
           <Image
             className="block pc:hidden"
-            src={`/images/Map.png`}
+            src={`/images/MapPC.png`}
             fill
             alt="Map"
             quality={100}
@@ -26,7 +26,7 @@ const Directions = () => {
           />
           <Image
             className="hidden pc:block"
-            src={`/images/Map.png`}
+            src={`/images/MapPC.png`}
             fill
             alt="Map"
             quality={100}
