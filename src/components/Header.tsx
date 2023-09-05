@@ -79,7 +79,7 @@ export const Header = () => {
             ></div>
           </div>
           <div
-            className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer"
+            className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-not-allowed"
             onClick={() => {
               // router.push('/thyroid');
             }}
