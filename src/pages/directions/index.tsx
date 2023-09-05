@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Directions = () => {
   return (
     <>
-      <div className="pt-[104px] pc:pt-[189px] w-full flex flex-col items-center font-notoSans">
+      <div className="pt-[104px] pc:pt-[189px] w-full flex flex-col items-center font-notoSans text-black">
         <div className="h-[110px] pc:h-[200px] flex flex-col items-center justify-center">
           <div className="text-[10px] pc:text-[14px] text-ym-gray tracking-[6px]">
             DIRECTIONS
