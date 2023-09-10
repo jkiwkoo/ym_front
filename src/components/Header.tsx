@@ -78,7 +78,7 @@ export const Header = () => {
               } w-full pc:w-[115px]`}
             ></div>
           </div>
-          <div
+          {/* <div
             className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-not-allowed"
             onClick={() => {
               // router.push('/thyroid');
@@ -100,7 +100,7 @@ export const Header = () => {
                   : 'group-hover:border-black border-transparent'
               } w-full pc:w-[115px]`}
             ></div>
-          </div>
+          </div> */}
           <div
             className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer"
             onClick={() => {
