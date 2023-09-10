@@ -289,6 +289,24 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="w-full bg-ym-gray-3 flex flex-col items-center justify-center">
+          <div className="relative w-[7.2px] pc:w-[11px] h-[85px] pc:h-[130px]">
+            <Image src={`/images/LineBlue.png`} fill alt="Line" />
+          </div>
+          <div className="mt-[20px] pc:mt-[24px] h-[110px] pc:h-[200px] flex flex-col items-center justify-center">
+            <div className="text-[10px] pc:text-[14px] text-ym-gray tracking-[6px]">
+              CONTACT
+            </div>
+            <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold mb-[25px] pc:mb-[50px]">
+              온라인 상담
+            </div>
+            <div className="flex">
+              <div>이름</div>
+              <div>입력칸</div>
+            </div>
+            <div>신청하기</div>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -18,6 +18,7 @@ module.exports = {
         'ym-blue-4': '#005AD9',
         'ym-gray': '#B0B0B0',
         'ym-gray-2': '#737373',
+        'ym-gray-3': '#EAEAEA',
         'ym-green': '#9CC92E',
         'ym-green-2': '#00AA00',
         'ym-red': '#B90028',

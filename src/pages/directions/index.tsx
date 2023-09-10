@@ -15,23 +15,28 @@ const Directions = () => {
         <div className="text-[16px] pc:text-[24px] text-black font-semibold mb-[13px] pc:mb-[72px]">
           서울 강남구 테헤란로 121 원빌딩 6F
         </div>
-        <div className="relative w-[94.14vw] pc:w-[66.67vw] h-[42.8vw] pc:h-[32.4vw] mb-[30px] pc:mb-[72px]">
-          <Image
-            className="block pc:hidden"
-            src={`/images/MapPC.png`}
-            fill
-            alt="Map"
-            quality={100}
-            priority
-          />
-          <Image
-            className="hidden pc:block"
-            src={`/images/MapPC.png`}
-            fill
-            alt="Map"
-            quality={100}
-            priority
-          />
+        <div className="flex flex-col pc:flex-row mb-[30px] pc:mb-[72px]">
+          <div className="relative w-[94.14vw] pc:w-[39.375vw] h-[42.8vw] pc:h-[23.125vw]">
+            <Image
+              className="block pc:hidden"
+              src={`/images/Map.png`}
+              fill
+              alt="Map"
+              quality={100}
+              priority
+            />
+            <Image
+              className="hidden pc:block"
+              src={`/images/MapPC.png`}
+              fill
+              alt="Map"
+              quality={100}
+              priority
+            />
+          </div>
+          <div className="bg-ym-blue text-white pc:w-[17.552vw] h-[164px] pc:h-[23.125vw]">
+            <div>진료시간</div>
+          </div>
         </div>
         <div className="flex flex-col pc:flex-row justify-center items-center pc:items-start gap-[13px] pc:gap-0 mb-[40px]">
           <div className="flex justify-center pc:justify-start w-[220px] text-[16px] pc:text-[20px] font-bold">
@@ -50,7 +55,7 @@ const Directions = () => {
             자가용 이용 시
           </div>
           <div className="flex justify-start pc:w-[30.2vw] mx-[36px] text-[12px] pc:text-[20px]">
-            테헤란로를 따라사 들어오시다가 국기원입구에서 우회전으로 들어가서
+            테헤란로를 따라서 들어오시다가 국기원입구에서 우회전으로 들어가서
             원빌딩(오피스디포 건물) 주차장 입구로 오시면 됩니다.
           </div>
         </div>

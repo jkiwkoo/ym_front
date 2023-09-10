@@ -290,6 +290,27 @@ const Prostate = () => {
             </div>
           </div>
         </div>
+        <div className="w-full bg-white flex flex-col items-center">
+          <div className="relative w-[7.2px] pc:w-[11px] h-[85px] pc:h-[130px]">
+            <Image src={`/images/LineBlue.png`} fill alt="Line" />
+          </div>
+          <div className="h-[110px] pc:h-[200px] flex flex-col items-center justify-center">
+            <div className="text-[10px] pc:text-[14px] text-ym-gray tracking-[6px]">
+              UROLIFT
+            </div>
+            <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
+              유로리프트
+            </div>
+            <div>사진</div>
+            <div>사진</div>
+            <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
+              유로리프트 원리
+            </div>
+          </div>
+        </div>
+        <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
+          유로리프트 장점
+        </div>
       </div>
     </>
   );
