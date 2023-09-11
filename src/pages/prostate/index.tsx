@@ -301,15 +301,281 @@ const Prostate = () => {
             <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
               유로리프트
             </div>
-            <div>사진</div>
-            <div>사진</div>
-            <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
+          </div>
+          <div className="w-full pc:w-[72.916vw] h-[39.186vw] pc:h-[28.646vw]">
+            <div className="hidden pc:block z-30 absolute mt-[13.8vw] ml-[7.71vw]">
+              <div className="text-[24px] text-ym-blue-3 font-bold mb-[1.04vw]">
+                유로리프트란?
+              </div>
+              <div className="text-black text-[20px] mb-[2.08vw] font-semibold">
+                <div>약물치료와 수술치료의 단점을 모두 해결해주는</div>
+                <div>
+                  신의료기술(2014년도 등재)이며 FDA(미국식약처)와
+                  MFDS(한국식약처)에
+                </div>
+                <div>
+                  정식으로 허가되어 입증 된 비수술적 시술(최소 침습적 치료)
+                </div>
+              </div>
+              <div className="flex text-white text-[16px] gap-[5px]">
+                <div className="flex items-center justify-center bg-ym-blue-3 rounded-[8px] px-[20px] h-[40px]">
+                  짧은 시술시간(약 10~20분)
+                </div>
+                <div className="flex items-center justify-center bg-ym-blue-3 rounded-[8px] px-[20px] h-[40px]">
+                  국소마취
+                </div>
+                <div className="flex items-center justify-center bg-ym-blue-3 rounded-[8px] px-[20px] h-[40px]">
+                  입원 불필요
+                </div>
+                <div className="flex items-center justify-center bg-ym-blue-3 rounded-[8px] px-[20px] h-[40px]">
+                  빠른 회복기간
+                </div>
+                <div className="flex items-center justify-center bg-ym-blue-3 rounded-[8px] px-[20px] h-[40px]">
+                  성기능 보존
+                </div>
+              </div>
+            </div>
+            <div className="relative w-full pc:w-[72.916vw] h-[39.186vw] pc:h-[28.646vw]">
+              <Image
+                src={`/images/Urolift.png`}
+                fill
+                quality={100}
+                priority
+                alt="Urolift"
+              />
+            </div>
+          </div>
+          <div className="block pc:hidden bg-white px-[30px]">
+            <div className="text-[16px] text-ym-blue-3 font-bold mb-[13px]">
+              유로리프트란?
+            </div>
+            <div className="text-black text-[14px] font-semibold mb-[25px]">
+              <div>약물치료와 수술치료의 단점을 모두 해결해주는</div>
+              <div>신의료기술(2014년도 등재)이며 FDA(미국식약처)와</div>
+              <div>MFDS(한국식약처)에 정식으로 허가되어 입증 된</div>
+              <div>비수술적 시술(최소 침습적 치료)</div>
+            </div>
+            <div className="flex text-white text-[14px] gap-[5px]">
+              <div className="flex items-center justify-center bg-ym-blue-3 rounded-[5px] px-[20px] h-[34px]">
+                짧은 시술시간(약 10~20분)
+              </div>
+              <div className="flex items-center justify-center bg-ym-blue-3 rounded-[5px] px-[15px] h-[34px]">
+                국소마취
+              </div>
+            </div>
+            <div className="flex text-white text-[14px] gap-[5px] pt-[5px]">
+              <div className="flex items-center justify-center bg-ym-blue-3 rounded-[5px] px-[10px] h-[34px]">
+                입원 불필요
+              </div>
+              <div className="flex items-center justify-center bg-ym-blue-3 rounded-[5px] px-[10px] h-[34px]">
+                빠른 회복기간
+              </div>
+              <div className="flex items-center justify-center bg-ym-blue-3 rounded-[5px] px-[10px] h-[34px]">
+                성기능 보존
+              </div>
+            </div>
+          </div>
+          <div className="relative mt-[70px] pc:mt-[45px] w-full pc:w-[72.916vw] h-[112.468vw] pc:h-[33.073vw] flex items-center">
+            <Image
+              className="block pc:hidden"
+              src={'/images/Man.png'}
+              alt="Man"
+              quality={100}
+              priority
+              fill
+            />
+            <div className="hidden pc:block pc:absolute z-30 right-[40px] w-[25vw] bg-black bg-opacity-50 text-white h-[28.646vw] px-[60px] pt-[3.646vw] font-apple overflow-hidden">
+              <div className="text-[36px] mb-[1.04vw]">시술대상 및 강점</div>
+              <div className="text-[20px] mb-[0.9vw]">
+                전립선비대증을 앓고 있는 중년이상의 남성
+              </div>
+              <div className="text-[20px] mb-[0.9vw]">
+                약물 치료에 대해 부작용을 걱정하시는 분들
+              </div>
+              <div className="text-[20px] mb-[1.71vw]">
+                마취에 대한 위험, 수술후 부작용, 두려움으로 치료를 미루시는 분들
+              </div>
+              <div className="text-[18px] mb-[0.1vw]">• 즉시효과</div>
+              <div className="text-[18px] mb-[0.1vw]">• 실손보험적용가능</div>
+              <div className="text-[18px] mb-[0.1vw]">• 당일퇴원가능</div>
+              <div className="text-[18px] mb-[0.1vw]">
+                • 국소마취, 10~20분내외소요
+              </div>
+              <div className="text-[18px] mb-[0.1vw]">• 일상생활 복귀가능</div>
+              <div className="text-[18px] mb-[0.1vw]">
+                • 사정장애 후유증으로부터 안전
+              </div>
+            </div>
+            <Image
+              className="hidden pc:block"
+              src={'/images/ManPC.png'}
+              alt="Man"
+              quality={100}
+              priority
+              fill
+            />
+          </div>
+          <div className="block pc:hidden w-full bg-black bg-opacity-50 text-white  px-[12.72vw] py-[6.87vw] font-apple">
+            <div className="text-[24px] mb-[5vw]">시술대상 및 강점</div>
+            <div className="text-[14px] mb-[2.5vw]">
+              전립선비대증을 앓고 있는 중년이상의 남성
+            </div>
+            <div className="text-[14px] mb-[2.5vw]">
+              약물 치료에 대해 부작용을 걱정하시는 분들
+            </div>
+            <div className="text-[14px] mb-[5vw]">
+              마취에 대한 위험, 수술후 부작용, 두려움으로 치료를 미루시는 분들
+            </div>
+            <div className="text-[13px] mb-[1vw]">• 즉시효과</div>
+            <div className="text-[13px] mb-[1vw]">• 실손보험적용가능</div>
+            <div className="text-[13px] mb-[1vw]">• 당일퇴원가능</div>
+            <div className="text-[13px] mb-[1vw]">
+              • 국소마취, 10~20분내외소요
+            </div>
+            <div className="text-[13px] mb-[1vw]">• 일상생활 복귀가능</div>
+            <div className="text-[13px] mb-[1vw]">
+              • 사정장애 후유증으로부터 안전
+            </div>
+          </div>
+          <div className="h-[110px] pc:h-[200px] flex flex-col items-center justify-center">
+            <div className="border border-ym-blue-2 w-[50px] pc:w-[80px] mb-[10px]"></div>
+            <div className="text-[24px] pc:text-[46px] text-ym-blue-2 font-semibold">
               유로리프트 원리
             </div>
           </div>
+          <div className="grid grid-cols-2 pc:grid-cols-4 gap-[10px] pc:gap-[20px] items-center justify-center">
+            <div>
+              <div className="relative w-[170px] pc:w-[285px] h-[170px] pc:h-[284px]">
+                <Image src={'/images/Urolift1.png'} fill alt="Urolift" />
+              </div>
+              <div className="flex flex-col w-[170px] pc:w-[285px] items-center justify-center">
+                <div className="mt-[15px] text-[18px] text-ym-blue-3 font-bold">
+                  STEP01
+                </div>
+                <div className="mt-[5px] pc:mt-[10px] text-[14px] pc:text-[22px] text-black text-center pc:h-[100px]">
+                  <div>전립선이 비대해져</div>
+                  <div>요도가 좁아지거나 막힘</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="relative w-[170px] pc:w-[285px] h-[170px] pc:h-[284px]">
+                <Image src={'/images/Urolift2.png'} fill alt="Urolift" />
+              </div>
+              <div className="flex flex-col w-[170px] pc:w-[285px] items-center justify-center">
+                <div className="mt-[15px] text-[18px] text-ym-blue-3 font-bold">
+                  STEP02
+                </div>
+                <div className="mt-[5px] pc:mt-[10px] text-[14px] pc:text-[22px] text-black text-center pc:h-[100px]">
+                  <div>유로리프트 기구 진입하여</div>
+                  <div>전립선을 묶어준다</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="relative w-[170px] pc:w-[285px] h-[170px] pc:h-[284px]">
+                <Image src={'/images/Urolift3.png'} fill alt="Urolift" />
+              </div>
+              <div className="flex flex-col w-[170px] pc:w-[285px] items-center justify-center">
+                <div className="mt-[15px] text-[18px] text-ym-blue-3 font-bold">
+                  STEP03
+                </div>
+                <div className="mt-[5px] pc:mt-[10px] text-[14px] pc:text-[22px] text-black text-center pc:h-[100px]">
+                  <div>묶인 특수금속실은</div>
+                  <div>영구적으로 전립선을</div>
+                  <div>열어 유지된다.</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="relative w-[170px] pc:w-[285px] h-[170px] pc:h-[284px]">
+                <Image src={'/images/Urolift4.png'} fill alt="Urolift" />
+              </div>
+              <div className="flex flex-col w-[170px] pc:w-[285px] items-center justify-center">
+                <div className="mt-[15px] text-[18px] text-ym-blue-3 font-bold">
+                  STEP04
+                </div>
+                <div className="mt-[5px] pc:mt-[10px] text-[14px] pc:text-[22px] text-black text-center pc:h-[100px]">
+                  <div>전문의가 판단한 필요한 수</div>
+                  <div>만큼 추가로 묶어줘</div>
+                  <div>완벽히 요도를 개방시킨다.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col pc:flex-row gap-[25px] pc:gap-[60px] items-center justify-center mb-[55px] pc:mb-[155px] mt-[40px] pc:mt-[70px] font-bold">
+            <div>
+              <div className="text-[16px] pc:text-[24px] text-ym-blue-3 mb-[10px] pc:mb-[30px] flex items-center justify-center">
+                [위에서 볼때]
+              </div>
+              <div className="relative w-[330px] pc:w-[567px] h-[184px] pc:h-[316px]">
+                <Image src={'/images/Urolift5.png'} fill alt="Urolift" />
+              </div>
+            </div>
+            <div>
+              <div className="text-[16px] pc:text-[24px] text-ym-blue-3 mb-[10px] pc:mb-[30px] flex items-center justify-center">
+                [정면에서 볼때]
+              </div>
+              <div className="relative w-[330px] pc:w-[567px] h-[184px] pc:h-[316px]">
+                <Image src={'/images/Urolift6.png'} fill alt="Urolift" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold">
+        <div className="border border-ym-blue-2 w-[50px] pc:w-[80px] mb-[10px] mt-[50px] pc:mt-[100px]"></div>
+        <div className="text-[24px] pc:text-[46px] text-ym-blue-2 font-semibold mb-[30px] pc:mb-[80px]">
           유로리프트 장점
+        </div>
+        <div className="grid grid-cols-2 pc:grid-cols-3 items-center justify-center gap-[10px] pc:gap-[35px] mb-[50px] pc:mb-[100px]">
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT01
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              성기능(발기부전포함)에 영향을 주지 않고, 역사정과 같은 사정장애가
+              생기지 않습니다.
+            </div>
+          </div>
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT02
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              최소 침습적이라 회복도 빠르고 부작용이 거의없습니다.
+            </div>
+          </div>
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT03
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              짧은 수술시간
+            </div>
+          </div>
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT04
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              내구성이 뛰어난 소재의 특수금속실 사용
+            </div>
+          </div>
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT05
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              신속한 증상완화와 회복
+            </div>
+          </div>
+          <div className="rounded-[14px] bg-white w-[170px] pc:w-[351px] h-[170px] pc:h-[322px] flex flex-col items-center px-[10px] pc:px-[30px]">
+            <div className="pt-[30px] pc:pt-[60px] pb-[20px] pc:pb-[40px] text-[16px] pc:text-[18px] text-ym-blue-2 font-bold">
+              POINT06
+            </div>
+            <div className="text-[14px] pc:text-[22px] text-black text-center">
+              삶의 질 크게 향상
+            </div>
+          </div>
         </div>
       </div>
     </>
