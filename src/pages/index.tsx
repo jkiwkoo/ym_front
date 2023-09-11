@@ -365,11 +365,11 @@ const Home = () => {
             </div>
           </div>
           <div className="flex mb-[10px] pc:mb-[20px]">
-            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] tracking-widest">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] tracking-widest text-black">
               <nav>이</nav>
               <nav>름</nav>
             </div>
-            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
               <input
                 spellCheck={false}
                 placeholder="이름"
@@ -382,15 +382,15 @@ const Home = () => {
             </div>
           </div>
           <div className="flex mb-[10px] pc:mb-[20px]">
-            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] text-black">
               <nav>연</nav>
               <nav>락</nav>
               <nav>처</nav>
             </div>
             <div className="flex gap-[3vw] pc:gap-[10px]">
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <select
-                  className="w-full"
+                  className="w-full bg-transparent outline-none"
                   value={firstNumber}
                   onChange={(e) => {
                     setFirstNumber(e.target.value);
@@ -404,7 +404,7 @@ const Home = () => {
                   <option value="019">019</option>
                 </select>
               </div>
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <input
                   spellCheck={false}
                   className="w-full bg-transparent outline-none"
@@ -416,7 +416,7 @@ const Home = () => {
                   value={middleNumber}
                 />
               </div>
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <input
                   spellCheck={false}
                   className="w-full bg-transparent outline-none"
@@ -431,15 +431,15 @@ const Home = () => {
             </div>
           </div>
           <div className="flex mb-[10px] pc:mb-[20px]">
-            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] text-black">
               <nav>진</nav>
               <nav>료</nav>
               <nav>과</nav>
               <nav>목</nav>
             </div>
-            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
               <select
-                className="w-full"
+                className="w-full bg-transparent outline-none"
                 value={treatment}
                 onChange={(e) => {
                   setTreatment(e.target.value);
@@ -454,15 +454,15 @@ const Home = () => {
             </div>
           </div>
           <div className="flex mb-[5px] pc:mb-[10px]">
-            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] text-black">
               <nav>상담</nav>
               <nav>가능</nav>
               <nav>시간</nav>
             </div>
             <div className="flex gap-[3vw] pc:gap-[10px]">
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[5px] pc:px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[5px] pc:px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <select
-                  className="w-full"
+                  className="w-full bg-transparent outline-none"
                   value={year}
                   onChange={(e) => {
                     setYear(e.target.value);
@@ -473,9 +473,9 @@ const Home = () => {
                   <option value="2025">2025</option>
                 </select>
               </div>
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <select
-                  className="w-full"
+                  className="w-full bg-transparent outline-none"
                   value={month}
                   onChange={(e) => {
                     setMonth(e.target.value);
@@ -495,9 +495,9 @@ const Home = () => {
                   <option value="12">12</option>
                 </select>
               </div>
-              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
                 <select
-                  className="w-full"
+                  className="w-full bg-transparent outline-none"
                   value={day}
                   onChange={(e) => {
                     setDay(e.target.value);
@@ -540,9 +540,9 @@ const Home = () => {
           </div>
           <div className="flex mb-[10px] pc:mb-[20px]">
             <div className="flex items-center text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]"></div>
-            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] text-black">
               <select
-                className="w-full"
+                className="w-full bg-transparent outline-none"
                 value={time}
                 onChange={(e) => {
                   setTime(e.target.value);
@@ -570,13 +570,13 @@ const Home = () => {
             </div>
           </div>
           <div className="flex mb-[30px]">
-            <div className="flex items-start justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] pt-[5px]">
+            <div className="flex items-start justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] pt-[5px] text-black">
               <nav>문</nav>
               <nav>의</nav>
               <nav>내</nav>
               <nav>용</nav>
             </div>
-            <div className="w-[60vw] pc:w-[350px] h-[134px] pc:h-[140px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] pt-[5px]">
+            <div className="w-[60vw] pc:w-[350px] h-[134px] pc:h-[140px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] pt-[5px] text-black">
               <textarea
                 spellCheck={false}
                 className="h-full w-full bg-transparent outline-none resize-none"
