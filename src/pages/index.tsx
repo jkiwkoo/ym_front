@@ -1,6 +1,69 @@
 import Image from 'next/image';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const Home = () => {
+  const [name, setName] = useState('');
+  const [firstNumber, setFirstNumber] = useState('010');
+  const [middleNumber, setMiddleNumber] = useState('');
+  const [lastNumber, setLastNumber] = useState('');
+  const [treatment, setTreatment] = useState('');
+  const [year, setYear] = useState('2023');
+  const [month, setMonth] = useState('01');
+  const [day, setDay] = useState('01');
+  const [time, setTime] = useState('09:00');
+  const [message, setMessage] = useState('');
+
+  const clear = () => {
+    setName('');
+    setFirstNumber('010');
+    setMiddleNumber('');
+    setLastNumber('');
+    setTreatment('진료 과목을 선택하세요.');
+    setYear('2023');
+    setMonth('01');
+    setDay('01');
+    setTime('09:00');
+    setMessage('');
+  };
+
+  const isNumber = (number: string) => {
+    const re = new RegExp('^[0-9]{0,4}$');
+
+    return re.test(number);
+  };
+
+  const sendEmail = () => {
+    const templateParams = {
+      name: name,
+      number: `${firstNumber}-${middleNumber}-${lastNumber}`,
+      message: message,
+      treatment: treatment,
+      year: year,
+      month: month,
+      day: day,
+      time: time,
+    };
+
+    if (treatment === '진료 과목을 선택하세요.') {
+      alert('진료 과목을 선택해주세요.');
+      return;
+    }
+
+    try {
+      emailjs.send(
+        'service_l6u6dpp',
+        'template_wykf2qs',
+        templateParams,
+        'Mu9SzmMPQ8dC82KOV',
+      );
+      alert('문의가 전송되었습니다.');
+      clear();
+    } catch {
+      alert('문의 전송에 실패하였습니다.');
+    }
+  };
+
   return (
     <>
       <div className="pt-[104px] pc:pt-[189px] w-full flex flex-col items-center font-notoSans">
@@ -300,11 +363,237 @@ const Home = () => {
             <div className="text-[28px] pc:text-[50px] text-ym-blue-2 font-semibold mb-[25px] pc:mb-[50px]">
               온라인 상담
             </div>
-            <div className="flex">
-              <div>이름</div>
-              <div>입력칸</div>
+          </div>
+          <div className="flex mb-[10px] pc:mb-[20px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] tracking-widest">
+              <nav>이</nav>
+              <nav>름</nav>
             </div>
-            <div>신청하기</div>
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <input
+                spellCheck={false}
+                placeholder="이름"
+                className="w-full bg-transparent outline-none"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                value={name}
+              />
+            </div>
+          </div>
+          <div className="flex mb-[10px] pc:mb-[20px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+              <nav>연</nav>
+              <nav>락</nav>
+              <nav>처</nav>
+            </div>
+            <div className="flex gap-[3vw] pc:gap-[10px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <select
+                  className="w-full"
+                  value={firstNumber}
+                  onChange={(e) => {
+                    setFirstNumber(e.target.value);
+                  }}
+                >
+                  <option value="010">010</option>
+                  <option value="011">011</option>
+                  <option value="016">016</option>
+                  <option value="017">017</option>
+                  <option value="018">018</option>
+                  <option value="019">019</option>
+                </select>
+              </div>
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <input
+                  spellCheck={false}
+                  className="w-full bg-transparent outline-none"
+                  onChange={(e) => {
+                    isNumber(e.target.value)
+                      ? setMiddleNumber(e.target.value)
+                      : null;
+                  }}
+                  value={middleNumber}
+                />
+              </div>
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <input
+                  spellCheck={false}
+                  className="w-full bg-transparent outline-none"
+                  onChange={(e) => {
+                    isNumber(e.target.value)
+                      ? setLastNumber(e.target.value)
+                      : null;
+                  }}
+                  value={lastNumber}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex mb-[10px] pc:mb-[20px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+              <nav>진</nav>
+              <nav>료</nav>
+              <nav>과</nav>
+              <nav>목</nav>
+            </div>
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <select
+                className="w-full"
+                value={treatment}
+                onChange={(e) => {
+                  setTreatment(e.target.value);
+                }}
+              >
+                <option value="진료 과목을 선택하세요.">
+                  진료 과목을 선택하세요.
+                </option>
+                <option value="전립선">전립선</option>
+                <option value="갑상선">갑상선</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex mb-[5px] pc:mb-[10px]">
+            <div className="flex items-center justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]">
+              <nav>상담</nav>
+              <nav>가능</nav>
+              <nav>시간</nav>
+            </div>
+            <div className="flex gap-[3vw] pc:gap-[10px]">
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[5px] pc:px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <select
+                  className="w-full"
+                  value={year}
+                  onChange={(e) => {
+                    setYear(e.target.value);
+                  }}
+                >
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                </select>
+              </div>
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <select
+                  className="w-full"
+                  value={month}
+                  onChange={(e) => {
+                    setMonth(e.target.value);
+                  }}
+                >
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <div className="w-[18vw] pc:w-[110px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+                <select
+                  className="w-full"
+                  value={day}
+                  onChange={(e) => {
+                    setDay(e.target.value);
+                  }}
+                >
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div className="flex mb-[10px] pc:mb-[20px]">
+            <div className="flex items-center text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px]"></div>
+            <div className="w-[60vw] pc:w-[350px] h-[35px] pc:h-[40px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px]">
+              <select
+                className="w-full"
+                value={time}
+                onChange={(e) => {
+                  setTime(e.target.value);
+                }}
+              >
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+              </select>
+            </div>
+          </div>
+          <div className="flex mb-[30px]">
+            <div className="flex items-start justify-between text-[14px] pc:text-[20px] mr-[10px] pc:mr-[30px] w-[85px] pc:w-[140px] pt-[5px]">
+              <nav>문</nav>
+              <nav>의</nav>
+              <nav>내</nav>
+              <nav>용</nav>
+            </div>
+            <div className="w-[60vw] pc:w-[350px] h-[134px] pc:h-[140px] bg-white flex items-center justify-start px-[10px] border border-ym-border text-[14px] pc:text-[16px] pt-[5px]">
+              <textarea
+                spellCheck={false}
+                className="h-full w-full bg-transparent outline-none resize-none"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+                value={message}
+              />
+            </div>
+          </div>
+          <div
+            className="w-[84.5vw] pc:w-[520px] h-[50px] bg-ym-blue flex items-center justify-center text-white text-[16px] pc:text-[20px] mb-[50px] pc:mb-[100px] hover:cursor-pointer"
+            onClick={() => {
+              sendEmail();
+            }}
+          >
+            신청하기
           </div>
         </div>
       </div>
