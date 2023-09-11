@@ -34,8 +34,36 @@ const Directions = () => {
               priority
             />
           </div>
-          <div className="bg-ym-blue text-white pc:w-[17.552vw] h-[164px] pc:h-[23.125vw]">
-            <div>진료시간</div>
+          <div className="bg-ym-blue text-white pc:w-[17.552vw] h-[164px] pc:h-[23.125vw] px-[20px] pc:px-[50px]">
+            <div className="text-[20px] pc:text-[28px] font-bold mb-[22px] mt-[24px] pc:mt-[3.6vw]">
+              진료시간
+            </div>
+            <div className="flex flex-row pc:flex-col justify-between text-[14px] pc:text-[20px]">
+              <div className="w-full">
+                <div className="flex justify-start items-center gap-[10px]">
+                  <div className="font-bold">평 일</div>
+                  <div>9:00 - 17:00</div>
+                </div>
+                <div className="flex justify-start items-center gap-[10px]">
+                  <div className="font-bold">토요일</div>
+                  <div>9:00 - 16:00</div>
+                </div>
+                <div className="flex justify-start items-center">
+                  월요일, 일요일 휴진
+                </div>
+              </div>
+              <div className="border-l pc:border-t border-white w-0 pc:w-[12.29vw] h-[75px] pc:h-[0px] pc:mx-0 pc:my-[1.15vw]"></div>
+              <div className="w-full">
+                <div className="flex justify-start items-center gap-[10px] pl-[20px] pc:pl-0">
+                  <div className="font-bold">Tel</div>
+                  <div>02-3453-8275</div>
+                </div>
+                <div className="flex justify-start items-center gap-[10px] pl-[20px] pc:pl-0">
+                  <div className="font-bold">Fax</div>
+                  <div>02-3453-8217</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex flex-col pc:flex-row justify-center items-center pc:items-start gap-[13px] pc:gap-0 mb-[40px]">
