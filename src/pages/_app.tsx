@@ -3,6 +3,17 @@ import type { AppProps } from 'next/app';
 import { Header } from '@/components/Header';
 import localFont from '@next/font/local';
 import Head from 'next/head';
+import { Contact } from '@/components/Contact';
+
+const Applefonts = localFont({
+  src: [
+    {
+      path: '../../public/fonts/AppleSDGothicNeoB.ttf',
+      weight: '400',
+    },
+  ],
+  variable: '--font-apple',
+});
 
 const NotoSansRegularFonts = localFont({
   src: [
@@ -34,10 +45,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`${NotoSansRegularFonts.variable} ${NotoSansBoldFonts.variable}`}
+        className={`${Applefonts.variable} ${NotoSansRegularFonts.variable} ${NotoSansBoldFonts.variable}`}
       >
         <Header />
         <Component {...pageProps} />
+        <Contact />
       </div>
     </>
   );
