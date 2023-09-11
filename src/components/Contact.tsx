@@ -99,7 +99,20 @@ export const Contact = () => {
           toggle();
         }}
       >
-        +
+        <Image
+          className="absolute"
+          src={'/images/Vertical.png'}
+          width={2}
+          height={18}
+          alt="Vertical"
+        />
+        <Image
+          className="absolute"
+          src={'/images/Horizontal.png'}
+          width={18}
+          height={2}
+          alt="Horizontal"
+        />
       </div>
     </div>
   );
