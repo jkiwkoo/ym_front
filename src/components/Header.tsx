@@ -1,8 +1,21 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
   const router = useRouter();
+
+  const [popupIsOpen, setPopupIsOpen] = useState(true);
+
+  useEffect(() => {
+    const escKeyModalClose = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setPopupIsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', escKeyModalClose);
+    return () => window.removeEventListener('keydown', escKeyModalClose);
+  }, []);
 
   return (
     <div className="fixed w-full z-50 text-ym-gray-2">
@@ -15,7 +28,9 @@ export const Header = () => {
             height={48}
             alt="Banner"
             onClick={() => {
-              router.push('/');
+              router.push('/').then(() => {
+                setPopupIsOpen(false);
+              });
             }}
           />
         </div>
@@ -27,7 +42,9 @@ export const Header = () => {
             height={26}
             alt="Banner"
             onClick={() => {
-              router.push('/');
+              router.push('/').then(() => {
+                setPopupIsOpen(false);
+              });
             }}
           />
         </div>
@@ -37,7 +54,9 @@ export const Header = () => {
           <div
             className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer"
             onClick={() => {
-              router.push('/');
+              router.push('/').then(() => {
+                setPopupIsOpen(false);
+              });
             }}
           >
             <div
@@ -58,7 +77,9 @@ export const Header = () => {
           <div
             className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer"
             onClick={() => {
-              router.push('/prostate');
+              router.push('/prostate').then(() => {
+                setPopupIsOpen(false);
+              });
             }}
           >
             <div
@@ -104,7 +125,9 @@ export const Header = () => {
           <div
             className="group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer"
             onClick={() => {
-              router.push('/directions');
+              router.push('/directions').then(() => {
+                setPopupIsOpen(false);
+              });
             }}
           >
             <div
@@ -125,6 +148,29 @@ export const Header = () => {
             ></div>
           </div>
         </div>
+      </div>
+      <div
+        className={`hidden ${
+          popupIsOpen ? 'pc:block' : ''
+        } mt-[70px] ml-[340px] w-[600px] h-[800px] z-30`}
+      >
+        <div
+          className="absolute z-20 h-[46px] bottom-[43px] left-[380px] w-[204px] hover:cursor-pointer"
+          onClick={() => {
+            router.push('/prostate').then(() => {
+              setPopupIsOpen(false);
+            });
+          }}
+        ></div>
+        <div
+          className="absolute z-20 w-[23px] h-[23px] bottom-[760px] left-[900px] border hover:cursor-pointer flex items-center justify-center text-white"
+          onClick={() => {
+            setPopupIsOpen(false);
+          }}
+        >
+          <Image src={'/images/Close.png'} width={17} height={17} alt="Close" />
+        </div>
+        <Image src={'/images/Popup.png'} width={600} height={800} alt="Popup" />
       </div>
     </div>
   );
