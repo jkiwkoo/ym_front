@@ -67,7 +67,7 @@ export const Contact = () => {
           <div
             className="w-[40px] pc:w-[57px] h-[40px] pc:h-[57px] rounded-full overflow-hidden bg-ym-blue-3 pc:bg-ym-blue-5 flex items-center justify-center pc:mb-[11px] hover:cursor-pointer"
             onClick={() => {
-              console.log('TODO');
+              location.href = 'tel:01058830348';
             }}
           >
             <Image
